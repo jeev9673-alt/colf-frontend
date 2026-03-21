@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+	--brand: #0d6efd;
+	--brand-600: #0b5ed7;
+	--muted: #6c757d;
+	--bg: #ffffff;
+	--surface: #f8f9fa;
+	--success: #198754;
+	--danger: #dc3545;
+	--text: #111827;
+	--muted-2: #6b7280;
+	--radius: 10px;
+	--gap: 16px;
+	--max-width: 1100px;
+}
+
+*{box-sizing:border-box}
+.site-root{font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+/* typography helpers */
+h1,h2,h3{font-family:Poppins, Inter, system-ui}
+h1{font-size:2.6rem;line-height:1.05;margin:0 0 18px}
+h2{font-size:1.6rem;margin:0 0 12px}
+.container{max-width:var(--max-width);margin:0 auto;padding:0 16px}
+
+/* Utility spacing helpers */
+.stack{display:flex;flex-direction:column;gap:var(--gap)}
+.row{display:flex;gap:var(--gap);align-items:center}
+
+/* Accessible focus */
+:focus{outline:2px solid color-mix(in srgb, var(--brand) 40%, black);outline-offset:2px}
+
+/* Header/Footer */
+
+.site-header{background:white;color:var(--text);padding:18px 0;position:sticky;top:0;z-index:55;border-bottom:1px solid #eef0f2}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-header .brand{font-weight:700;color:var(--text);text-decoration:none;font-size:1.15rem;display:flex;align-items:center;gap:10px}
+.site-header .brand-logo{width:38px;height:38px}
+.site-header .center-block{flex:1;margin:0 24px;display:flex;justify-content:center}
+.search-card{background:#fff;border:1px solid #eef0f2;padding:14px;border-radius:12px;display:flex;gap:12px;align-items:center;max-width:720px;width:100%;box-shadow:0 4px 20px rgba(15,23,42,0.03)}
+.search-card input{border:0;padding:10px 12px;flex:1}
+.search-card .loc{display:flex;gap:8px;align-items:center;color:var(--muted-2);font-size:0.95rem}
+.site-header .nav{display:flex;gap:18px}
+.site-header .nav a{color:var(--muted-2);padding:8px 10px;border-radius:8px}
+.site-header .nav a:hover{background:color-mix(in srgb, var(--brand) 6%, transparent);color:var(--text)}
+
+
+.site-footer{background:#f7f8f9;color:var(--muted-2);padding:34px 0;margin-top:48px;border-top:1px solid #e9ecef}
+.site-footer .container{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.site-footer .col{flex:1;min-width:180px}
+.site-footer h4{margin:0 0 10px;font-size:1rem}
+.site-footer ul{list-style:none;padding:0;margin:0}
+.site-footer li{margin-bottom:10px;font-size:13px;color:var(--muted-2)}
+.site-footer .legal{margin-top:18px;font-size:12px;color:#9aa0a6}
+
+/* Page layout */
+main.main{padding:36px 0}
+
+/* Cards / grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--gap)}
+.card{background:white;border:1px solid #e9ecef;border-radius:var(--radius);padding:16px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+.card h3{margin-top:0;margin-bottom:8px}
+
+.muted{color:var(--muted-2)}
+
+/* Forms */
+input,select,textarea{width:100%;padding:10px;border:1px solid #e6e6e6;border-radius:8px}
+textarea{min-height:120px}
+button.btn{background:var(--brand);color:white;padding:10px 14px;border-radius:10px;border:none;cursor:pointer}
+button.btn.secondary{background:var(--success)}
+button.btn:active{transform:translateY(1px)}
+
+/* Small screens */
+@media (max-width:640px){
+	.site-header .nav{display:none}
+	.site-header .brand{font-size:1rem}
+	h1{font-size:1.4rem}
+	.container{padding:0 12px}
+	main.main{padding:22px 0}
+}
+
+/* Larger tablet */
+@media (min-width:1024px){
+	:root{--gap:20px}
+}
+
+/* Responsive small tweaks */
+@media (max-width:640px){
+	.site-header .nav{display:none}
+	h1{font-size:1.6rem}
+}
+
