@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#eef6ff"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)"/>
+  <g fill="#0d6efd" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    <rect x="60" y="120" width="740" height="560" rx="20" fill="#cfe8ff" />
+    <text x="120" y="260" font-size="44" fill="#063970">Trusted home professionals</text>
+    <text x="120" y="320" font-size="20" fill="#0b5ed7">Cleaning · AC · Plumbing · Electrical</text>
+  </g>
+</svg>
